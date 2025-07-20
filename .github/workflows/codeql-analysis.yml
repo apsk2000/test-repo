@@ -31,3 +31,9 @@ jobs:
       uses: github/codeql-action/autobuild@v3
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
+ 
+    - name: Run Fetch GHAS Scan Data Action
+      uses: ./ # Path to your custom action
+      with:
+        repo_url: https://github.com/apsk2000/report-action
+        token: ${{ secrets.GITHUB_TOKEN }}
