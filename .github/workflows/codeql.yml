@@ -1,0 +1,23 @@
+name: Run Custom Action With Inputs
+
+on:
+  workflow_dispatch:
+    inputs:
+      repo_url:
+        description: 'Repository URL'
+        required: true
+        type: string
+      token:
+        description: 'GitHub Token'
+        required: true
+        type: string
+
+jobs:
+  call-other-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Report Generation
+        uses: apsk2000/report-action
+        with:
+          repo_url: ${{ inputs.repo_url }}
+          token: ${{ inputs.token }}
