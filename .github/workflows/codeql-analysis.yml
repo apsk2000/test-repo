@@ -32,7 +32,7 @@ jobs:
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
  
-    - name: Run Fetch GHAS Scan Data Action
+    - name: Run Fetch GHAS Scan Action
       uses: apsk2000/report-action@main
       with:
         repo_url: https://github.com/apsk2000/test-repo
