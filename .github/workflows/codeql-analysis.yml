@@ -37,3 +37,8 @@ jobs:
       with:
         repo_url: https://github.com/apsk2000/test-repo
         token: ${{ secrets.TOKEN }}
+    - name: Upload scan artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: scan-artifact
+        path: artifact.zip
