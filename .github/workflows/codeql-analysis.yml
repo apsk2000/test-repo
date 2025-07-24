@@ -35,7 +35,7 @@ jobs:
     - name: Run Fetch GHAS Scan Action
       uses: apsk2000/report-action@main
       with:
-        repo_url: https://github.com/apsk2000/test-repo
+        repo_url: ${{ github.repository }}
         token: ${{ secrets.TOKEN }}
     - name: Upload scan artifact
       uses: actions/upload-artifact@v4
